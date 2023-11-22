@@ -1,0 +1,4 @@
+g++ data_generator.cpp -o data_generator.out -std=c++11 -pthread
+./data_generator.out
+g++ matching_engine.cpp -o matching_engine.out
+./matching_engine.out

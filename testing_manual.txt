@@ -1,0 +1,10 @@
+I used a quite straightforward approach to test my solution, as the engine is quite simple (while can be easily expanded) containing one server and one client at this time.
+I used various scenarios where prices, quantity differs and caters to edge cases. I included a mechanism in the data_generator script where you can test the engine using predetermined test case files
+rather than the actual random generator. I have included a few simple test cases that I used to test the engine with output files.
+test.txt - One seller, 100 buyers
+test2.txt - No matching prices, hence, no match
+test3.txt - Order i and Order i + 1 are always matched with each other
+test4.txt - Randomly generated but finite orders 
+
+You can easily add any test cases if you want as long as the format follows this. Every line is in x,y,z format. Where x [0 or 1] represents the type of the order,
+y is the price and z is the quantity. 
