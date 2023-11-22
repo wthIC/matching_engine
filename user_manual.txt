@@ -1,4 +1,26 @@
-g++ data_generator.cpp -o data_generator.out -std=c++11 -pthread
-./data_generator.out
+To run the server:
+Go into the directory containing matching_engine.cpp and run the following command to compile the file:
 g++ matching_engine.cpp -o matching_engine.out
-./matching_engine.out
+Then run the following command:
+./matching_engine.out [print flag]
+You can replace [print flag] with true if you want to print the information regarding messages received from the clients, and false if you do not want to.
+
+To run the client:
+After running the server, you can compile the data generator using the following command:
+g++ data_generator.cpp -o data_generator.out -std=c++11 -pthread
+Then you can use the following command to run the client:
+./data_generator.out [random flag]
+If you replace [random flag] with true, the generator will send random orders forever until you interrupt the progam.
+If you set it false, the generator will send one of the test cases. There are 4 test cases already provided, but you can add extra ones you want. And you can change the name of the file it is reading from in line 81.
+
+The strucutre of a singular order:
+OrderID - positive integer
+Type - 0 or 1 -> 0 indicating Sell, 1 indicating Buy orders
+Price - positive integer between 1 and 100
+Quantity - positive integer between 1 and 50
+
+These limits can be easily adjusted in the data_generator script.
+
+Everytime a match or partial fill is found, a message in the form:
+"Match found - Buyer: x, Seller: y, Price: p_xy, Quantity: p_xy" will be sent to client and displayed in the client terminal.
+
