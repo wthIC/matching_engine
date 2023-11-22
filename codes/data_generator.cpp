@@ -78,7 +78,7 @@ int main(int argc, char *argv[]) {
         isRandom = false;
         testIdx = 0;
         std::string line;
-        ifstream MyReadFile("test4.txt");
+        ifstream MyReadFile("../test_cases/test4.txt");
         int cnt = 1; //Keep track of order id
         while (getline(MyReadFile, line)) {
             testSize++;

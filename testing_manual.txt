@@ -8,3 +8,5 @@ test4.txt - Randomly generated but finite orders
 
 You can easily add any test cases if you want as long as the format follows this. Every line is in x,y,z format. Where x [0 or 1] represents the type of the order,
 y is the price and z is the quantity. 
+
+You can end the executing by just interrupting with a Ctrl + C or equivalent.
